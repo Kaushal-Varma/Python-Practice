@@ -1,6 +1,20 @@
 class Solution:
     def pattern22(self, n):
-        print(n)
+        size = 2*n-1
+
+        for i in range(size):
+            for j in range(size):
+                distance = i
+                if j<distance:
+                    distance = j
+                if size-1-i<distance:
+                    distance =(size-1-i)
+                if size-1-j<distance:
+                    distance =(size-1-j)
+
+                value = n-distance
+                print(value,end=' ')
+            print()
         
 
 
